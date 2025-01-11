@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class Mover : MonoBehaviour
 {
-    [SerializeField] private float MoveSpeed;
+    [SerializeField] private float Speed;
 
     void FixedUpdate()
     {
         Vector3 moveDirection = transform.right;
 
-        transform.position += moveDirection * MoveSpeed * Time.deltaTime;
+        transform.position += moveDirection * Speed * Time.deltaTime;
     }
 }

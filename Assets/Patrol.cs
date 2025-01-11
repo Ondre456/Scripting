@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThereAndBackAgainScript : MonoBehaviour
+public class Patrol : MonoBehaviour
 {
-    [SerializeField] private float RunningSpeed;
+    [SerializeField] private float Speed;
     [SerializeField] private GameObject FirstPoint;
     [SerializeField] private GameObject LastPoint;
 
@@ -26,6 +26,6 @@ public class ThereAndBackAgainScript : MonoBehaviour
                 _currentGoal = FirstPoint;
         }
 
-        transform.position = Vector3.MoveTowards(transform.position, _currentGoal.transform.position, RunningSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, _currentGoal.transform.position, Speed);
     }
 }
